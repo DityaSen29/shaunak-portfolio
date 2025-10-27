@@ -117,7 +117,7 @@ const Projects = () => {
     <>
       <section id="projects" ref={ref} className="section-container">
         <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-center tracking-tight">Projects Showcase</h2>
+          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-center tracking-tight">Key Engagements</h2>
           <div className="h-1 w-20 bg-foreground mx-auto mb-12"></div>
         </div>
 

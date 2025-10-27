@@ -34,13 +34,19 @@ const Navigation = () => {
         </button>
 
         <div className="flex items-center gap-10">
-          {["about", "experience", "projects", "achievements", "contact"].map((section) => (
+          {[
+            { id: "about", label: "About" },
+            { id: "experience", label: "Experience" },
+            { id: "projects", label: "Key Engagements" },
+            { id: "certifications", label: "Certifications" },
+            { id: "contact", label: "Contact" }
+          ].map((section) => (
             <button
-              key={section}
-              onClick={() => scrollToSection(section)}
-              className="text-foreground/70 hover:text-foreground transition-all duration-300 capitalize relative group font-medium"
+              key={section.id}
+              onClick={() => scrollToSection(section.id)}
+              className="text-foreground/70 hover:text-foreground transition-all duration-300 relative group font-medium"
             >
-              {section}
+              {section.label}
               <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-foreground group-hover:w-full transition-all duration-300" />
             </button>
           ))}

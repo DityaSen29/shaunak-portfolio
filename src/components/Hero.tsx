@@ -17,14 +17,14 @@ const Hero = () => {
         <div className="space-y-8">
           <div className="space-y-5">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground leading-tight tracking-tight slide-in-left">
-              Hi, I'm Shaunak Pandit
+              Precision. Passion. Persistence.
             </h1>
             <div className="h-1.5 w-28 bg-foreground slide-in-left stagger-1 rounded-full"></div>
           </div>
           
           <div className="space-y-5 slide-in-left stagger-2">
             <h2 className="text-lg md:text-xl text-foreground/85 font-medium leading-relaxed max-w-2xl">
-              Cloud & DevOps Engineer <span className="text-foreground/40">|</span> Application Modernization Specialist <span className="text-foreground/40">|</span> AI-driven Solutions Enthusiast
+              Multi Cloud Practitioner <span className="text-foreground/40">|</span> Infra, DevSecOps and Mainframe Modernization Consultant
             </h2>
 
             <p className="text-base md:text-lg text-foreground/60 leading-relaxed max-w-xl font-light">
