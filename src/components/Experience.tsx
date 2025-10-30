@@ -24,15 +24,15 @@ const Experience = () => {
   return (
     <section id="experience" ref={ref} className="section-container bg-gradient-to-b from-background via-accent/10 to-background">
       <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-        <h2 className="text-5xl md:text-6xl font-bold mb-6 text-center tracking-tight">Professional Experience</h2>
-        <div className="h-1 w-20 bg-foreground mx-auto mb-16"></div>
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center tracking-tight">Professional Experience</h2>
+        <div className="h-1 w-16 md:w-20 bg-foreground mx-auto mb-8 md:mb-16"></div>
       </div>
 
-      <div className="max-w-4xl mx-auto relative">
+      <div className="max-w-4xl mx-auto relative px-4">
         {/* Modern timeline line */}
         <div className="absolute left-8 top-0 bottom-0 w-[3px] bg-gradient-to-b from-foreground via-gray-300 to-foreground hidden md:block opacity-30" />
 
-        <div className="space-y-16">
+        <div className="space-y-10 md:space-y-16">
           {experiences.map((exp, index) => (
             <div 
               key={index} 
@@ -44,20 +44,20 @@ const Experience = () => {
                 <div className="w-3 h-3 rounded-full bg-foreground"></div>
               </div>
 
-              <div className="bg-white border border-gray-100 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
-                <div className="space-y-4">
-                  <h4 className="text-3xl font-bold text-foreground">{exp.company}</h4>
-                  <div className="space-y-2">
+              <div className="bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                <div className="space-y-3 md:space-y-4">
+                  <h4 className="text-2xl sm:text-2xl md:text-3xl font-bold text-foreground">{exp.company}</h4>
+                  <div className="space-y-1.5 md:space-y-2">
                     {exp.roles.map((role, roleIndex) => (
-                      <div key={roleIndex} className="flex items-baseline gap-2 text-muted-foreground">
-                        <span className="font-semibold text-foreground text-lg">{role.title}</span>
-                        <span className="text-sm">•</span>
-                        <span className="text-sm">{role.period}</span>
+                      <div key={roleIndex} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-2 text-muted-foreground">
+                        <span className="font-semibold text-foreground text-base sm:text-lg">{role.title}</span>
+                        <span className="text-xs sm:text-sm hidden sm:inline">•</span>
+                        <span className="text-xs sm:text-sm">{role.period}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-4"></div>
-                  <p className="text-foreground/80 leading-relaxed text-base">{exp.description}</p>
+                  <div className="h-px bg-gradient-to-r from-transparent via-gray-300 to-transparent my-3 md:my-4"></div>
+                  <p className="text-foreground/80 leading-relaxed text-sm sm:text-base">{exp.description}</p>
                 </div>
               </div>
             </div>

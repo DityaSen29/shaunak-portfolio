@@ -117,28 +117,28 @@ const Projects = () => {
     <>
       <section id="projects" ref={ref} className="section-container">
         <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-          <h2 className="text-5xl md:text-6xl font-bold mb-6 text-center tracking-tight">Key Engagements</h2>
-          <div className="h-1 w-20 bg-foreground mx-auto mb-12"></div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 text-center tracking-tight">Key Engagements</h2>
+          <div className="h-1 w-16 md:w-20 bg-foreground mx-auto mb-8 md:mb-12"></div>
         </div>
 
-        <p className={`text-lg text-center text-muted-foreground mb-16 max-w-2xl mx-auto transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <p className={`text-base md:text-lg text-center text-muted-foreground mb-12 md:mb-16 max-w-2xl mx-auto px-4 transition-all duration-700 delay-100 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           A collection of impactful projects delivering measurable results and innovative solutions.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {projects.map((project, index) => (
             <div
               key={index}
               onClick={() => setSelectedProject(project)}
-              className={`group bg-white rounded-3xl p-8 hover:shadow-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group bg-white rounded-3xl p-6 md:p-8 hover:shadow-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: isVisible ? `${index * 0.08 + 0.2}s` : '0s' }}
             >
-              <div className="flex items-start justify-between gap-3 mb-4">
-                <h3 className="text-xl font-bold text-foreground leading-tight flex-1">
+              <div className="flex items-start justify-between gap-3 mb-3 md:mb-4">
+                <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight flex-1">
                   {project.title}
                 </h3>
                 <svg 
-                  className="w-6 h-6 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0" 
+                  className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0" 
                   fill="none" 
                   viewBox="0 0 24 24" 
                   stroke="currentColor"
@@ -148,17 +148,17 @@ const Projects = () => {
                 </svg>
               </div>
               
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-4">
+              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3 md:mb-4">
                 {project.company}
               </p>
               
-              <p className="text-foreground/70 leading-relaxed text-sm mb-5 flex-grow">
+              <p className="text-foreground/70 leading-relaxed text-sm mb-4 md:mb-5 flex-grow">
                 {project.summary}
               </p>
 
               <div className="pt-1 border-t border-gray-100">
-                <p className="text-xs font-bold text-foreground mb-2 mt-4">Tech Stack:</p>
-                <p className="text-sm text-foreground/70 leading-relaxed">
+                <p className="text-xs font-bold text-foreground mb-2 mt-3 md:mt-4">Tech Stack:</p>
+                <p className="text-xs md:text-sm text-foreground/70 leading-relaxed">
                   {project.techStack.join(" • ")}
                 </p>
               </div>
@@ -168,36 +168,36 @@ const Projects = () => {
       </section>
 
       <Dialog open={!!selectedProject} onOpenChange={() => setSelectedProject(null)}>
-        <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto bg-white rounded-3xl">
-          <DialogHeader className="space-y-3">
-            <DialogTitle className="text-3xl font-bold text-foreground leading-tight pr-6">
+        <DialogContent className="max-w-[95vw] sm:max-w-2xl md:max-w-3xl max-h-[90vh] md:max-h-[85vh] overflow-y-auto bg-white rounded-2xl md:rounded-3xl p-6 md:p-8">
+          <DialogHeader className="space-y-2 md:space-y-3">
+            <DialogTitle className="text-xl sm:text-2xl md:text-3xl font-bold text-foreground leading-tight pr-8 md:pr-6">
               {selectedProject?.title}
             </DialogTitle>
-            <DialogDescription className="text-sm font-bold text-muted-foreground uppercase tracking-widest">
+            <DialogDescription className="text-xs md:text-sm font-bold text-muted-foreground uppercase tracking-widest">
               {selectedProject?.company}
             </DialogDescription>
           </DialogHeader>
 
-          <div className="space-y-6 pt-4">
-            <p className="text-base text-foreground/80 leading-relaxed">
+          <div className="space-y-5 md:space-y-6 pt-3 md:pt-4">
+            <p className="text-sm md:text-base text-foreground/80 leading-relaxed">
               {selectedProject?.summary}
             </p>
 
-            <div className="border-t border-gray-100 pt-6">
-              <h4 className="text-lg font-bold mb-4 text-foreground">Key Engagements:</h4>
-              <ul className="space-y-3 text-foreground/80">
+            <div className="border-t border-gray-100 pt-4 md:pt-6">
+              <h4 className="text-base md:text-lg font-bold mb-3 md:mb-4 text-foreground">Key Engagements:</h4>
+              <ul className="space-y-2 md:space-y-3 text-foreground/80">
                 {selectedProject?.details.map((detail, index) => (
-                  <li key={index} className="flex items-start gap-3 leading-relaxed">
-                    <span className="text-foreground font-bold mt-1 flex-shrink-0">•</span>
+                  <li key={index} className="flex items-start gap-2 md:gap-3 leading-relaxed text-sm md:text-base">
+                    <span className="text-foreground font-bold mt-0.5 md:mt-1 flex-shrink-0">•</span>
                     <span>{detail}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="border-t border-gray-100 pt-6">
-              <h4 className="text-lg font-bold mb-3 text-foreground">Tech Stack:</h4>
-              <p className="text-base text-foreground/70 leading-relaxed">
+            <div className="border-t border-gray-100 pt-4 md:pt-6">
+              <h4 className="text-base md:text-lg font-bold mb-2 md:mb-3 text-foreground">Tech Stack:</h4>
+              <p className="text-sm md:text-base text-foreground/70 leading-relaxed">
                 {selectedProject?.techStack.join(" • ")}
               </p>
             </div>
