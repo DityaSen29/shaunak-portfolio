@@ -55,7 +55,7 @@ const Hero = () => {
           <div className="relative group w-full max-w-[280px] sm:max-w-xs md:max-w-md">
             <div className="absolute -inset-2 bg-gradient-to-br from-gray-200 via-gray-300 to-gray-200 rounded-3xl blur-xl opacity-50 group-hover:opacity-70 transition duration-700"></div>
             <img
-              src="/shaunak_1.png"
+              src="/shaunak_1.jpg"
               alt="Shaunak Pandit"
               className="relative w-full mx-auto rounded-3xl shadow-2xl transform transition-all duration-500 group-hover:scale-[1.03] border-[3px] border-gray-900/20"
             />

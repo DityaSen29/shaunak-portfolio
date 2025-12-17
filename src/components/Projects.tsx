@@ -12,99 +12,126 @@ const projects = [
   {
     title: "GenAI Chatbot for Insurance",
     company: "Deloitte",
-    summary: "Developed an AI-powered chatbot using LangChain, Vertex AI, and Cloud SQL to streamline insurance claim processing.",
-    techStack: ["LangChain", "Vertex AI", "Cloud SQL", "Python", "GCP"],
+    summary: "Built a GenAI-powered chatbot using LangChain and Vertex AI on GCP Cloud Run & Dialogflow with generative fallback, personalization, and sentiment analysis capabilities.",
+    techStack: ["LangChain", "Vertex AI", "GCP Cloud Run", "Dialogflow", "Python", "Sentiment Analysis"],
     details: [
       "Built a conversational AI chatbot using LangChain and Vertex AI for natural language understanding",
-      "Integrated with Cloud SQL databases for real-time policy and claim data retrieval",
-      "Implemented RAG (Retrieval-Augmented Generation) for accurate policy information",
-      "Reduced claim inquiry response time by 60% compared to traditional methods",
-      "Deployed on Google Cloud Platform with auto-scaling capabilities",
+      "Deployed on GCP Cloud Run with Dialogflow integration for enhanced conversational capabilities",
+      "Implemented generative fallback to handle unexpected queries gracefully",
+      "Configured personalization based on user data to recommend optimal insurance policies",
+      "Enabled sentiment analysis to gauge customer satisfaction and adjust responses accordingly",
+      "Chatbot trained on user interactions to continuously self-improve over time",
     ],
   },
   {
-    title: "Azure Container Apps Migration",
+    title: "Application Migration (Azure)",
     company: "Deloitte",
-    summary: "Architected and executed migration of legacy monolithic application to Azure Container Apps microservices architecture.",
-    techStack: ["Azure Container Apps", "Azure SQL", "Docker", "Terraform", "Azure DevOps"],
+    summary: "Single-handedly migrated a GenAI tax application from Azure Web Apps to Azure Container Apps in 3.5 days, reducing latency from 4 mins → 1 min for 60+ concurrent users; recognized on Deloitte Wall of Fame.",
+    techStack: ["Azure Container Apps", "Azure Web Apps", "Docker", "Azure DevOps", "GenAI"],
     details: [
-      "Migrated monolithic .NET application to containerized microservices on Azure Container Apps",
-      "Reduced API response time from 4 minutes to under 1 minute through architectural optimization",
-      "Implemented infrastructure-as-code using Terraform for reproducible deployments",
-      "Established CI/CD pipelines using Azure DevOps for automated deployments",
-      "Configured auto-scaling based on HTTP traffic and CPU metrics",
-      "Integrated Azure SQL Database with connection pooling for optimal performance",
+      "Migrated entire GenAI application for the tax technology vertical from Azure Web Apps to Azure Container Apps in just 3.5 days",
+      "Reduced application response time from 4 minutes per user to 1 minute for 60+ concurrent users",
+      "Optimized cost structure while increasing application availability and scalability",
+      "Application became a company-wide success, added to managed bookmarks for all Deloitte employees",
+      "Received significant appreciation and a 'Live the Dot' badge on Deloitte's Wall of Fame",
+      "Demonstrated ability to execute high-impact migrations under tight timelines",
     ],
   },
   {
-    title: "Mainframe Re-platforming PoC",
+    title: "Mainframe Re-platforming PoC (AWS)",
     company: "Deloitte",
-    summary: "Led proof-of-concept for re-platforming mainframe applications using modern cloud-native architecture.",
-    techStack: ["Salesforce", "z/OS Connect", "MuleSoft", "IBM Mainframe", "APIs"],
+    summary: "Created a PoC integrating Salesforce with zOS Connect via a containerized Java application on AWS EC2, enabling real-time CRM data exchange for a Japanese automobile client.",
+    techStack: ["AWS EC2", "zOS Connect", "Salesforce", "MuleSoft", "Java", "Containerization"],
     details: [
-      "Designed integration architecture connecting Salesforce CRM with IBM mainframe systems",
-      "Implemented z/OS Connect to expose mainframe services as RESTful APIs",
-      "Built MuleSoft integration layer for seamless data flow between systems",
-      "Demonstrated 70% reduction in transaction processing time",
-      "Created comprehensive documentation for enterprise-wide adoption",
-      "Conducted workshops with stakeholders to demonstrate modernization benefits",
+      "Created proof-of-concept for a Japanese automobile giant seeking to re-platform mainframe applications to AWS",
+      "Configured end-to-end connectivity architecture for mainframe-to-cloud integration",
+      "Deployed containerized Java application on Linux EC2 to translate API requests from Salesforce",
+      "Integrated with zOS Connect server hosted on AWS EC2 to fetch mainframe data",
+      "Enabled seamless data exchange between Salesforce CRM and MuleSoft via the integration layer",
+      "Demonstrated feasibility and benefits of modernizing legacy mainframe systems",
     ],
   },
   {
-    title: ".NET Application Modernization",
+    title: ".NET Modernization (AWS ECS)",
     company: "Deloitte",
-    summary: "Modernized legacy .NET Framework 4.8 application to .NET 8 and containerized deployment on AWS ECS.",
-    techStack: [".NET 8", "AWS ECS", "Docker", "AWS RDS", "GitHub Actions"],
+    summary: "Re-platformed a .NET 4.8 application to .NET 8, hosting on AWS ECS with MSSQL on EC2, integrated with Prometheus monitoring and CodeCommit/ECR for streamlined DevOps.",
+    techStack: [".NET 8", "AWS ECS", "AWS EC2", "MSSQL", "Prometheus", "AWS CodeCommit", "AWS ECR"],
     details: [
-      "Upgraded legacy .NET Framework 4.8 application to modern .NET 8 runtime",
-      "Containerized application using Docker with multi-stage builds for optimization",
-      "Deployed to AWS ECS with Fargate for serverless container management",
-      "Integrated with AWS RDS for database persistence with connection resilience",
-      "Implemented CI/CD using GitHub Actions for automated testing and deployment",
-      "Achieved 40% improvement in application performance and reduced hosting costs by 30%",
+      "Created proof-of-concept to demonstrate application modernization from .NET 4.8 to .NET 8 using AWS Q Developer",
+      "Hosted entire application on AWS ECS with complete VPC configuration",
+      "Deployed MSSQL database on EC2 server with proper security and networking setup",
+      "Integrated Prometheus for metrics visualization and application monitoring",
+      "Used AWS CodeCommit as the code repository and AWS ECR as the container registry",
+      "Showcased end-to-end modernization workflow with cloud-native DevOps practices",
     ],
   },
   {
-    title: "Banking Sector DevOps Transformation",
+    title: "Banking DevOps Ownership",
     company: "Deloitte",
-    summary: "Established enterprise DevOps practices for large banking client including Kubernetes orchestration and CI/CD pipelines.",
-    techStack: ["AWS EKS", "Jenkins", "Helm", "Terraform", "Python", "Git"],
+    summary: "Solely handled entire DevOps and infrastructure for a major Indian bank's outward remittance application on AWS EKS with Jenkins CI/CD, Helm, and Nginx reverse proxy across 9 environments.",
+    techStack: ["AWS EKS", "Jenkins", "Helm", "Nginx", "Kubernetes", "Terraform", "GitOps"],
     details: [
-      "Deployed production-grade Kubernetes clusters on AWS EKS for mission-critical banking applications",
-      "Designed and implemented Jenkins-based CI/CD pipelines with automated testing and security scanning",
-      "Created Helm charts for standardized application deployments across environments",
-      "Automated infrastructure provisioning using Terraform modules",
-      "Implemented GitOps workflows for configuration management and deployment tracking",
-      "Reduced deployment time from days to hours while improving reliability",
-      "Trained banking IT teams on Kubernetes and DevOps best practices",
+      "Solely managed DevOps and infrastructure for a major Indian bank's outward remittance application over 1.1 years",
+      "Deployed and maintained infrastructure with Nginx as reverse proxy and application on AWS EKS",
+      "Configured and operated Jenkins as the CI/CD tool for automated deployments",
+      "Handled entire Kubernetes cluster using Helm charts for deployment standardization",
+      "Performed troubleshooting, service configuration, and deployment management across 8 non-prod and 1 prod environment",
+      "Ensured high availability and scalability for mission-critical banking operations",
+      "Resolved major issues identified in VA and AppSec testing, ensuring compliance with required standards",
     ],
   },
   {
-    title: "Kubernetes Cluster Agent",
+    title: "Mainframe Modernization Core Team",
+    company: "Deloitte",
+    summary: "Currently contributing as Infrastructure & DevOps expert for Deloitte's strategic mainframe modernization initiatives.",
+    techStack: ["AWS", "Azure", "Kubernetes", "CI/CD", "Infrastructure as Code", "Modernization Frameworks"],
+    details: [
+      "Part of Deloitte's core team focused on mainframe modernization strategies and execution",
+      "Contributing expertise in infrastructure architecture and DevOps best practices",
+      "Collaborating on strategic initiatives to help clients transition from legacy mainframe systems",
+      "Providing technical guidance on cloud migration patterns and modernization approaches",
+      "Supporting proof-of-concepts and production implementations for modernization projects",
+    ],
+  },
+  {
+    title: "SSO Login with AWS Cognito + Azure AD",
     company: "ShunyEka Systems",
-    summary: "Built internal monitoring and management agent for Kubernetes clusters with automated remediation capabilities.",
-    techStack: ["Kubernetes", "Python", "Prometheus", "Grafana", "Helm"],
+    summary: "Developed SSO login for an application using AWS Cognito and Azure AD, configured end-to-end and fully automated deployment using Terraform.",
+    techStack: ["AWS Cognito", "Azure AD", "Terraform", "IAC", "SSO"],
     details: [
-      "Developed custom Kubernetes operator for cluster health monitoring and automated remediation",
-      "Integrated with Prometheus for metrics collection and alerting",
-      "Built Grafana dashboards for real-time cluster visualization",
-      "Implemented automated pod restart and resource scaling based on health checks",
-      "Packaged agent as Helm chart for easy deployment across multiple clusters",
-      "Reduced manual intervention for cluster issues by 50%",
+      "Created Single Sign-On (SSO) login solution for an application using AWS Cognito and Azure AD",
+      "Configured entire authentication flow from start to finish",
+      "Automated deployment and infrastructure provisioning using Terraform",
+      "Enabled seamless user authentication across cloud platforms",
+      "Reduced login friction and improved security posture for the application",
+    ],
+  },
+  {
+    title: "Cloud-Agnostic Kubernetes Agent",
+    company: "ShunyEka Systems",
+    summary: "Built an agent-based integration for Kubernetes clusters to stream data to the company's flagship application, enabling monitoring and insights across any cloud platform.",
+    techStack: ["Kubernetes", "Python", "Cloud-Agnostic Design", "Monitoring", "Data Streaming"],
+    details: [
+      "Developed agent-based integration deployable in any Kubernetes cluster",
+      "Designed to be cloud-independent, working across AWS, Azure, GCP, and on-premises clusters",
+      "Streamed cluster data to company's flagship application for centralized monitoring",
+      "Enabled actionable insights on cluster performance, health, and resource utilization",
+      "Simplified multi-cloud Kubernetes management for the company's clients",
     ],
   },
   {
     title: "AWS IAM Compliance Bot",
     company: "ShunyEka Systems",
-    summary: "Automated AWS IAM policy compliance checking and remediation to enforce security best practices.",
-    techStack: ["AWS Lambda", "Python", "AWS IAM", "CloudWatch", "SNS"],
+    summary: "Created a compliance bot for a quick commerce client to analyze IAM usage, enforce least-privilege via permission boundaries, and include email-based approval workflow.",
+    techStack: ["AWS IAM", "AWS Lambda", "Python", "Permissions Boundaries", "Email Automation"],
     details: [
-      "Built serverless compliance bot using AWS Lambda for continuous IAM policy monitoring",
-      "Automated detection of overly permissive policies and unused credentials",
-      "Implemented CloudWatch Events for scheduled compliance checks",
-      "Configured SNS notifications for security team alerts",
-      "Created automated remediation workflows for common compliance violations",
-      "Improved IAM security posture and reduced audit findings by 40%",
+      "Built compliance bot for a well-known quick commerce platform",
+      "Analyzed IAM user access across AWS accounts to identify actual service usage",
+      "Created permission boundaries restricting access to only services used in the last 'x' days (configurable parameter)",
+      "Implemented listener component to detect IAM activity",
+      "Built evaluator to assess access patterns and compliance requirements",
+      "Automated permission boundary creation and enforcement",
+      "Included email-based approval mechanism for administrative oversight",
     ],
   },
 ];
@@ -130,37 +157,42 @@ const Projects = () => {
             <div
               key={index}
               onClick={() => setSelectedProject(project)}
-              className={`group bg-white rounded-3xl p-6 md:p-8 hover:shadow-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 border border-gray-100 flex flex-col ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+              className={`group bg-white rounded-3xl p-6 md:p-8 hover:shadow-2xl cursor-pointer transition-all duration-500 hover:-translate-y-2 border-2 border-gray-100 hover:border-gray-200 flex flex-col relative overflow-hidden ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               style={{ transitionDelay: isVisible ? `${index * 0.08 + 0.2}s` : '0s' }}
             >
-              <div className="flex items-start justify-between gap-3 mb-3 md:mb-4">
-                <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight flex-1">
-                  {project.title}
-                </h3>
-                <svg 
-                  className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0" 
-                  fill="none" 
-                  viewBox="0 0 24 24" 
-                  stroke="currentColor"
-                  strokeWidth={2.5}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
+              {/* Subtle gradient overlay on hover */}
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               
-              <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3 md:mb-4">
-                {project.company}
-              </p>
-              
-              <p className="text-foreground/70 leading-relaxed text-sm mb-4 md:mb-5 flex-grow">
-                {project.summary}
-              </p>
-
-              <div className="pt-1 border-t border-gray-100">
-                <p className="text-xs font-bold text-foreground mb-2 mt-3 md:mt-4">Tech Stack:</p>
-                <p className="text-xs md:text-sm text-foreground/70 leading-relaxed">
-                  {project.techStack.join(" • ")}
+              <div className="relative z-10">
+                <div className="flex items-start justify-between gap-3 mb-3 md:mb-4">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground leading-tight flex-1">
+                    {project.title}
+                  </h3>
+                  <svg 
+                    className="w-5 h-5 md:w-6 md:h-6 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 flex-shrink-0" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
+                    strokeWidth={2.5}
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+                
+                <p className="text-xs font-bold text-muted-foreground uppercase tracking-widest mb-3 md:mb-4">
+                  {project.company}
                 </p>
+                
+                <p className="text-foreground/70 leading-relaxed text-sm mb-4 md:mb-5 flex-grow">
+                  {project.summary}
+                </p>
+
+                <div className="pt-1 border-t border-gray-100">
+                  <p className="text-xs font-bold text-foreground mb-2 mt-3 md:mt-4">Tech Stack:</p>
+                  <p className="text-xs md:text-sm text-foreground/70 leading-relaxed">
+                    {project.techStack.join(" • ")}
+                  </p>
+                </div>
               </div>
             </div>
           ))}
@@ -184,7 +216,7 @@ const Projects = () => {
             </p>
 
             <div className="border-t border-gray-100 pt-4 md:pt-6">
-              <h4 className="text-base md:text-lg font-bold mb-3 md:mb-4 text-foreground">Key Engagements:</h4>
+              <h4 className="text-base md:text-lg font-bold mb-3 md:mb-4 text-foreground">Project Details:</h4>
               <ul className="space-y-2 md:space-y-3 text-foreground/80">
                 {selectedProject?.details.map((detail, index) => (
                   <li key={index} className="flex items-start gap-2 md:gap-3 leading-relaxed text-sm md:text-base">
